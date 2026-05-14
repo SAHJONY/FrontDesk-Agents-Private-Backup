@@ -3,259 +3,354 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontdesk Agents | AI-Powered Business Automation</title>
+    <title>FrontDesk Agents | Luxury Real Estate Solutions</title>
     <style>
         :root {
-            --primary: #0066ff;
-            --secondary: #00cc99;
-            --dark: #1a1a1a;
-            --light: #f8f9fa;
+            --primary: #0d1117;
+            --secondary: #161b22;
+            --accent: #ff7b00;
+            --text: #f0f6fc;
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
         }
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
         body {
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
+            background-color: var(--primary);
+            color: var(--text);
+            overflow-x: hidden;
         }
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+        /* Hero Section */
         .hero {
-            margin-top: 2rem;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('landing_page_hero.jpg') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
+            text-align: center;
+            position: relative;
+            padding: 2rem;
         }
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
+        .hero h1 {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 20px rgba(255, 123, 0, 0.8);
+            letter-spacing: 2px;
+            animation: fadeInUp 1s ease-out;
         }
-        .subtitle {
+        .hero p {
             font-size: 1.5rem;
-            margin-bottom: 2rem;
             max-width: 800px;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            animation: fadeInUp 1.2s ease-out;
         }
         .cta-button {
-            background: var(--dark);
+            background: linear-gradient(to right, var(--accent), #ff5500);
             color: white;
             border: none;
-            padding: 1rem 2rem;
+            padding: 1.2rem 3rem;
             font-size: 1.2rem;
-            border-radius: 5px;
+            border-radius: 50px;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 123, 0, 0.5);
+            animation: fadeInUp 1.4s ease-out;
         }
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 20px rgba(255, 123, 0, 0.7);
         }
+        /* Features Section */
         .features {
+            padding: 6rem 2rem;
+            background-color: var(--secondary);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--accent);
+        }
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin: 4rem 0;
         }
         .feature-card {
-            background: white;
-            border-radius: 10px;
+            background: var(--primary);
+            border-radius: 15px;
             padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: var(--shadow);
         }
         .feature-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+        }
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
         }
         .feature-card h3 {
-            color: var(--primary);
+            font-size: 1.8rem;
             margin-bottom: 1rem;
         }
-        .pricing {
-            text-align: center;
-            margin: 4rem 0;
+        /* Testimonials Section */
+        .testimonials {
+            padding: 6rem 2rem;
+            background: linear-gradient(to bottom, var(--secondary), var(--primary));
         }
-        .pricing-grid {
+        .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
         }
-        .pricing-card {
-            background: white;
-            border-radius: 10px;
+        .testimonial-card {
+            background: var(--primary);
+            border-radius: 15px;
             padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        .pricing-card h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        .price {
-            font-size: 2.5rem;
-            margin: 1rem 0;
-        }
-        .features-list {
-            list-style-type: none;
-        }
-        .features-list li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
             position: relative;
+            box-shadow: var(--shadow);
         }
-        .features-list li:before {
-            content: '✓';
+        .testimonial-card:before {
+            content: '"';
             position: absolute;
-            left: 0;
-            color: var(--secondary);
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--accent);
+            opacity: 0.2;
+            font-family: serif;
+            line-height: 1;
         }
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--accent);
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background: var(--secondary);
+        }
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .form-group label {
+            font-weight: 600;
+        }
+        .form-group input, .form-group textarea {
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            background: var(--primary);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+        }
+        .form-group textarea {
+            min-height: 150px;
+        }
+        /* Footer */
         footer {
-            background: var(--dark);
-            color: white;
+            background: var(--primary);
+            padding: 2rem;
             text-align: center;
-            padding: 2rem 0;
-            margin-top: 4rem;
         }
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
             }
-            .subtitle {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            .hero p {
                 font-size: 1.2rem;
+            }
+            .section-title {
+                font-size: 2.5rem;
             }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-<div class="container">
-<img src="https://via.placeholder.com/150x50" alt="Frontdesk Agents Logo" class="logo">
-<h1>Frontdesk Agents</h1>
-            <p class="subtitle">AI-Powered Automation for Real Estate, E-commerce & Healthcare</p>
-            <button class="cta-button">Start Free Trial</button>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>FrontDesk Agents</h1>
+        <p>Transforming Real Estate with Cutting-Edge Technology and Unmatched Expertise</p>
+        <button class="cta-button">Schedule a Consultation</button>
+    </section>
+    <!-- Features Section -->
+    <section class="features">
+        <h2 class="section-title">Our Services</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🏠</div>
+                <h3>Property Management</h3>
+                <p>Comprehensive management solutions for residential and commercial properties with 24/7 monitoring and maintenance.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Market Analysis</h3>
+                <p>Advanced data-driven insights to maximize property value and investment returns in competitive markets.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Digital Marketing</h3>
+                <p>Targeted campaigns across all platforms to attract qualified buyers and renters for your properties.</p>
+            </div>
         </div>
-    </header>
-
-    <div class="container">
-        <section class="hero">
-            <p>Automate repetitive web tasks with self-improving AI agents. Save 20+ hours/week and scale your business effortlessly.</p>
-        </section>
-
-        <section class="features">
-            <div class="feature-card">
-                <h3>Real Estate Lead Engine</h3>
-                <p>Automatically scrape county records for distressed properties and update your cash buyer database daily.</p>
-                <ul class="features-list">
-                    <li>Scrapes 50+ county assessor websites</li>
-                    <li>Filters properties by equity and distress level</li>
-                    <li>Updates CRM with new leads every 24 hours</li>
-                    <li>Integrates with DocuSeal for instant contracts</li>
-                </ul>
-                <p><strong>ROI: $50K+ new deals/month</strong></p>
-            </div>
-
-            <div class="feature-card">
-                <h3>E-commerce Price Spy</h3>
-                <p>Monitor competitor prices on Amazon and auto-adjust your Shopify pricing in real-time.</p>
-                <ul class="features-list">
-                    <li>Tracks 100+ products across 50+ competitors</li>
-                    <li>Automatically adjusts prices to stay 5% below market</li>
-                    <li>Alerts for major price drops or stockouts</li>
-                    <li>Integrates with Shopify API for seamless updates</li>
-                </ul>
-                <p><strong>ROI: 12% higher conversion rates</strong></p>
-            </div>
-
-            <div class="feature-card">
-                <h3>Healthcare Patient Reminder</h3>
-                <p>Monitor patient portals for lab results and send SMS alerts for critical findings.</p>
-                <ul class="features-list">
-                    <li>Automates HIPAA-compliant patient monitoring</li>
-                    <li>Sends instant SMS alerts for abnormal results</li>
-                    <li>Reduces no-shows by 30% through automated reminders</li>
-                    <li>Integrates with EHR systems for seamless workflow</li>
-                </ul>
-                <p><strong>ROI: $18K/year saved in lost revenue</strong></p>
-            </div>
-        </section>
-
-        <section class="pricing">
-            <h2>Pricing Plans</h2>
-            <p>Start with our free trial, then scale as your business grows</p>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <p class="price">$97/month</p>
-                    <ul class="features-list">
-                        <li>1 industry-specific skill</li>
-                        <li>500 automated tasks/month</li>
-                        <li>Basic support</li>
-                        <li>Weekly skill updates</li>
-                    </ul>
-                    <button class="cta-button">Get Started</button>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>Pro</h3>
-                    <p class="price">$247/month</p>
-                    <ul class="features-list">
-                        <li>3 industry-specific skills</li>
-                        <li>2000 automated tasks/month</li>
-                        <li>Priority support</li>
-                        <li>Daily skill updates</li>
-                        <li>Custom skill development</li>
-                    </ul>
-                    <button class="cta-button">Get Started</button>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>Enterprise</h3>
-                    <p class="price">$997/month</p>
-                    <ul class="features-list">
-                        <li>Unlimited skills</li>
-                        <li>Unlimited tasks</li>
-                        <li>24/7 dedicated support</li>
-                        <li>Custom API integrations</li>
-                        <li>White-label solution</li>
-                    </ul>
-                    <button class="cta-button">Get Started</button>
+    </section>
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2 class="section-title">Client Success Stories</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-content">"FrontDesk Agents transformed our rental portfolio with their tech-driven approach. We've seen a 40% increase in occupancy rates within 6 months."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JD</div>
+                    <div>
+                        <h4>John Davis</h4>
+                        <p>Property Portfolio Manager</p>
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <section class="testimonials">
-            <h2>Real Results</h2>
             <div class="testimonial-card">
-                <p>"Frontdesk Agents generated $1.2M in real estate deals in 6 months. We closed 3x more deals with the same team size."
-                <br><strong>- SAHJONY, Real Estate Wholesaler</strong></p>
+                <p class="testimonial-content">"Their AI-powered marketing strategy brought us 30+ qualified leads in the first month. Best investment we've made for our real estate business."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SM</div>
+                    <div>
+                        <h4>Sarah Mitchell</h4>
+                        <p>Real Estate Developer</p>
+                    </div>
+                </div>
             </div>
             <div class="testimonial-card">
-                <p>"Our e-commerce store saw 12% higher conversion rates after automating competitor pricing. We now save 30+ hours/week on manual price checks."
-                <br><strong>- E-commerce Store Owner</strong></p>
+                <p class="testimonial-content">"The seamless integration of their platform with our existing systems saved us 20+ hours per week. Professionalism and innovation at its best."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">RL</div>
+                    <div>
+                        <h4>Rachel Lee</h4>
+                        <p>Commercial Property Owner</p>
+                    </div>
+                </div>
             </div>
-            <div class="testimonial-card">
-                <p>"We reduced no-shows by 40% and saved $18K/year in lost revenue with automated patient reminders."
-                <br><strong>- Clinic Manager</strong></p>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h4>Headquarters</h4>
+                        <p>123 Luxury Avenue, Beverly Hills, CA 90210</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+1 (800) 555-1234</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@frontdeskagents.com</p>
+                    </div>
+                </div>
             </div>
-        </section>
-    </div>
-
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="How can we help you?"></textarea>
+                </div>
+                <button class="cta-button">Send Message</button>
+            </div>
+        </div>
+    </section>
     <footer>
-        <div class="container">
-            <p>© 2024 Frontdesk Agents. All rights reserved.</p>
-            <p>www.frontdeskagents.com | support@frontdeskagents.com</p>
-        </div>
+        <p>&copy; 2024 FrontDesk Agents. All rights reserved.</p>
+        <p>Transforming Real Estate Through Innovation and Excellence</p>
     </footer>
 </body>
 </html>
