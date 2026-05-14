@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontdesk Agents | AI-Powered Business Automation</title>
+    <style>
+        :root {
+            --primary: #0066ff;
+            --secondary: #00cc99;
+            --dark: #1a1a1a;
+            --light: #f8f9fa;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .hero {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+        .cta-button {
+            background: var(--dark);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .pricing {
+            text-align: center;
+            margin: 4rem 0;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .pricing-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .pricing-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .price {
+            font-size: 2.5rem;
+            margin: 1rem 0;
+        }
+        .features-list {
+            list-style-type: none;
+        }
+        .features-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .features-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Frontdesk Agents</h1>
+            <p class="subtitle">AI-Powered Automation for Real Estate, E-commerce & Healthcare</p>
+            <button class="cta-button">Start Free Trial</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <p>Automate repetitive web tasks with self-improving AI agents. Save 20+ hours/week and scale your business effortlessly.</p>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>Real Estate Lead Engine</h3>
+                <p>Automatically scrape county records for distressed properties and update your cash buyer database daily.</p>
+                <ul class="features-list">
+                    <li>Scrapes 50+ county assessor websites</li>
+                    <li>Filters properties by equity and distress level</li>
+                    <li>Updates CRM with new leads every 24 hours</li>
+                    <li>Integrates with DocuSeal for instant contracts</li>
+                </ul>
+                <p><strong>ROI: $50K+ new deals/month</strong></p>
+            </div>
+
+            <div class="feature-card">
+                <h3>E-commerce Price Spy</h3>
+                <p>Monitor competitor prices on Amazon and auto-adjust your Shopify pricing in real-time.</p>
+                <ul class="features-list">
+                    <li>Tracks 100+ products across 50+ competitors</li>
+                    <li>Automatically adjusts prices to stay 5% below market</li>
+                    <li>Alerts for major price drops or stockouts</li>
+                    <li>Integrates with Shopify API for seamless updates</li>
+                </ul>
+                <p><strong>ROI: 12% higher conversion rates</strong></p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Healthcare Patient Reminder</h3>
+                <p>Monitor patient portals for lab results and send SMS alerts for critical findings.</p>
+                <ul class="features-list">
+                    <li>Automates HIPAA-compliant patient monitoring</li>
+                    <li>Sends instant SMS alerts for abnormal results</li>
+                    <li>Reduces no-shows by 30% through automated reminders</li>
+                    <li>Integrates with EHR systems for seamless workflow</li>
+                </ul>
+                <p><strong>ROI: $18K/year saved in lost revenue</strong></p>
+            </div>
+        </section>
+
+        <section class="pricing">
+            <h2>Pricing Plans</h2>
+            <p>Start with our free trial, then scale as your business grows</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <p class="price">$97/month</p>
+                    <ul class="features-list">
+                        <li>1 industry-specific skill</li>
+                        <li>500 automated tasks/month</li>
+                        <li>Basic support</li>
+                        <li>Weekly skill updates</li>
+                    </ul>
+                    <button class="cta-button">Get Started</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Pro</h3>
+                    <p class="price">$247/month</p>
+                    <ul class="features-list">
+                        <li>3 industry-specific skills</li>
+                        <li>2000 automated tasks/month</li>
+                        <li>Priority support</li>
+                        <li>Daily skill updates</li>
+                        <li>Custom skill development</li>
+                    </ul>
+                    <button class="cta-button">Get Started</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <p class="price">$997/month</p>
+                    <ul class="features-list">
+                        <li>Unlimited skills</li>
+                        <li>Unlimited tasks</li>
+                        <li>24/7 dedicated support</li>
+                        <li>Custom API integrations</li>
+                        <li>White-label solution</li>
+                    </ul>
+                    <button class="cta-button">Get Started</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>Real Results</h2>
+            <div class="testimonial-card">
+                <p>"Frontdesk Agents generated $1.2M in real estate deals in 6 months. We closed 3x more deals with the same team size."
+                <br><strong>- SAHJONY, Real Estate Wholesaler</strong></p>
+            </div>
+            <div class="testimonial-card">
+                <p>"Our e-commerce store saw 12% higher conversion rates after automating competitor pricing. We now save 30+ hours/week on manual price checks."
+                <br><strong>- E-commerce Store Owner</strong></p>
+            </div>
+            <div class="testimonial-card">
+                <p>"We reduced no-shows by 40% and saved $18K/year in lost revenue with automated patient reminders."
+                <br><strong>- Clinic Manager</strong></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Frontdesk Agents. All rights reserved.</p>
+            <p>www.frontdeskagents.com | support@frontdeskagents.com</p>
+        </div>
+    </footer>
+</body>
+</html>
