@@ -1,0 +1,15 @@
+{
+  "name": "components",
+  "style": "radix",
+  "tailwind": {
+    "config": "tailwind.config.js",
+    "css": "src/app/globals.css",
+    "baseColor": "slate",
+    "cssVariables": true
+  },
+  "srcDir": "src",
+  "componentsDir": "components",
+  "rsc": true,
+  "tsx": true,
+  "prefix": "ui"
+}

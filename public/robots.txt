@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.frontdeskagents.com
+
+# Sitemaps
+Sitemap: https://www.frontdeskagents.com/sitemap.xml
