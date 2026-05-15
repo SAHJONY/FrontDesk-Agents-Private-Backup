@@ -28,4 +28,12 @@ export default function Home() {
      )
    }
 
-
+export default function Home() {
+     return (
+       <div className="container mx-auto p-4">
+         <h1 className="text-3xl font-bold">Welcome to FrontDesk Agents</h1>
+         <p>Find off-market real estate deals in your area.</p>
+         {/* Add your property listings here */}
+       </div>
+     )
+   }
