@@ -1,10 +1,10 @@
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-    "./src/components/**/*.{js,jsx,ts,tsx}"
+    "./app/*/.{js,ts,jsx,tsx}",
+    "./src/*/.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {}
+    extend: {},
   },
-  plugins: [require('@shadcn/ui')]
+  plugins: [], // ← REMOVE THE INVALID @shadcn/ui PLUGIN
 }
